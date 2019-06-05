@@ -1,46 +1,30 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import {
+    map as _map,
+    capitalize as _capitalize
+} from 'lodash';
 
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      name: 'ViewHome',
-      component: () => import('@/views/Home.vue')
-    },
-    {
-      path: '/about',
-      name: 'ViewAbout',
-      component: () => import('@/views/About.vue')
-    },
-    {
-      path: '/gallery',
-      name: 'ViewGallery',
-      component: () => import('@/views/Gallery.vue')
-    },
-    {
-      path: '/map',
-      name: 'ViewMap',
-      component: () => import('@/views/Map.vue')
-    },
-    {
-      path: '/menu',
-      name: 'ViewMenu',
-      component: () => import('@/views/Menu.vue')
-    },
-    {
-      path: '/recipes',
-      name: 'ViewRecipes',
-      component: () => import('@/views/Recipes.vue')
-    },
-    {
-      path: '/shop',
-      name: 'ViewShop',
-      component: () => import('@/views/Shop.vue')
-    },
-  ]
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes: _map(
+        ['home', 'about', 'gallery', 'map', 'menu', 'recipes', 'shop'],
+        route => {
+            const capitalized = _capitalize(route);
+            return route === 'home'
+                ? {
+                    path: '/',
+                    name: 'ViewHome',
+                    component: () => import('@/views/Home.vue')
+                }
+                : {
+                    path: `/${route}`,
+                    name: `View${capitalized}`,
+                    component: () => import(`@/views/${capitalized}.vue`)
+                };
+        }
+    )
 });

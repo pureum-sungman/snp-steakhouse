@@ -1,7 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
-import router from "./routers";
-import store from "./stores";
+import router from "@/plugins/vue-router";
+import store from "@/plugins/vuex";
 
 // 스타일
 import './assets/styles/main.scss';

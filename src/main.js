@@ -1,12 +1,15 @@
-import Vue from "vue";
-import App from "./App.vue";
-import router from "@/plugins/vue-router";
-import store from "@/plugins/vuex";
+import Vue from 'vue';
+import App from './App.vue';
+
+// Vue 플러그인
+import router from '@/plugins/vue-router';
+import store from '@/plugins/vuex';
+import '@/plugins/axios';
 
 // 스타일
 import './assets/styles/main.scss';
 
-// 모듈
+// 노드 모듈
 import 'jquery';
 import 'popper.js';
 import 'bootstrap';

@@ -8,20 +8,19 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'ViewHome',
-      component: () => import(
-        /* webpackChunkName: "viewHome" */
-        '@/views/Home.vue'
-      )
-    },
-    {
       path: '/about',
       name: 'ViewAbout',
-      component: () => import(
-        /* webpackChunkName: "viewAbout" */
-        '@/views/About.vue'
-      )
-    }
+      component: () => import('@/views/About.vue')
+    },
+    {
+      path: '/gallery',
+      name: 'ViewGallery',
+      component: () => import('@/views/Gallery.vue')
+    },
+    {
+      path: '/',
+      name: 'ViewHome',
+      component: () => import('@/views/Home.vue')
+    },
   ]
 });

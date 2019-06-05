@@ -1,8 +1,9 @@
-// 부트스트랩 4 & 그 외 변수들, 최상단에 import 할 것
+// 부트스트랩 4 & 그 외 변수들
+// 꼭 최상단에 import 할 것
 @import './variables';
 
 // 구글 폰트 & 글씨 관련 스타일
 @import './typography';
 
-// 부트스트랩 4
+// 부트스트랩 4 모듈
 @import '~bootstrap/scss/bootstrap';

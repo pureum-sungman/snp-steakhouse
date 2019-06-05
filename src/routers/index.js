@@ -8,6 +8,11 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
+      path: '/',
+      name: 'ViewHome',
+      component: () => import('@/views/Home.vue')
+    },
+    {
       path: '/about',
       name: 'ViewAbout',
       component: () => import('@/views/About.vue')
@@ -18,9 +23,24 @@ export default new Router({
       component: () => import('@/views/Gallery.vue')
     },
     {
-      path: '/',
-      name: 'ViewHome',
-      component: () => import('@/views/Home.vue')
+      path: '/map',
+      name: 'ViewMap',
+      component: () => import('@/views/Map.vue')
+    },
+    {
+      path: '/menu',
+      name: 'ViewMenu',
+      component: () => import('@/views/Menu.vue')
+    },
+    {
+      path: '/recipes',
+      name: 'ViewRecipes',
+      component: () => import('@/views/Recipes.vue')
+    },
+    {
+      path: '/shop',
+      name: 'ViewShop',
+      component: () => import('@/views/Shop.vue')
     },
   ]
 });

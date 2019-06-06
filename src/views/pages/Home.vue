@@ -1,52 +1,46 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="@/assets/images/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-    <div class="my-50">
-      <h1>
-        반응형 글씨 크기 h1
-      </h1>
-    </div>
-    <h2>
-      반응형 글씨 크기 h2
-    </h2>
-    <h3>
-      반응형 글씨 크기 h3
-    </h3>
-    <h4>
-      반응형 글씨 크기 h4
-    </h4>
-    <h5>
-      반응형 글씨 크기 h5
-    </h5>
-    <h6>
-      반응형 글씨 크기 h6
-    </h6>
-    <p class="mb-5">
-      반응형 글씨 크기 p
-    </p>
+  <div class="container">
+    <section id="recipes">
+      <div class="row">
+        <div class="col text-center">
+          <h1 class="font-cursive display-1">
+            Recipes
+          </h1>
+        </div>
+        <!-- .col -->
+      </div>
+      <!-- .row -->
+      <div class="row">
+        <div
+          v-for="(recipe, index) in recipes"
+          :key="index"
+          class="col-12 col-md-6 col-lg-4"
+        >
+          <h1 class="font-cursive">
+            {{ recipe.title }}
+          </h1>
+        </div>
+        <!-- .col-12 col-md-6 col-lg-4 -->
+      </div>
+      <!-- .row -->
+    </section>
+    <!-- #recipes -->
   </div>
+  <!-- .container -->
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/views/components/HelloWorld.vue';
-
 export default {
   name: 'ViewHome',
   data() {
-    return {};
+    return {
+      recipes: [{ title: 'A' }, { title: 'B' }, { title: 'C' }]
+    };
   },
   mounted() {
-    this.$nextTick(() => {
-      this.$axios
-        .get('https://api.coindesk.com/v1/bpi/currentprice.json')
-        .then(response => console.log(response));
-    });
+    this.$nextTick(() => {});
   },
   methods: {},
-  components: {
-    HelloWorld
-  }
+  components: {}
 };
 </script>

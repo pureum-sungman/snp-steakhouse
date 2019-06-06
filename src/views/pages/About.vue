@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div>
     <h1>This is an about page</h1>
   </div>
 </template>
@@ -9,3 +9,5 @@ export default {
   name: 'ViewAbout'
 };
 </script>
+
+<style lang="scss" scoped></style>

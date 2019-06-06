@@ -1,5 +1,5 @@
 <template>
-  <div class="recipes">
+  <div>
     <h1>This is an recipes page</h1>
   </div>
 </template>

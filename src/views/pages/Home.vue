@@ -1,12 +1,10 @@
 <template>
-  <div class="home">
+  <div>
     <img alt="Vue logo" src="@/assets/images/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
-    <div class="my-50">
-      <h1>
-        반응형 글씨 크기 h1
-      </h1>
-    </div>
+    <h1 class="my-50">
+      반응형 글씨 크기 h1
+    </h1>
     <h2>
       반응형 글씨 크기 h2
     </h2>

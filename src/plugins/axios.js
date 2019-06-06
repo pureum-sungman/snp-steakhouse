@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // https://github.com/axios/axios
 Vue.use({
-  install(V) {
+  install(Vue) {
     /**
      * 공통 기본 설정
      **/
@@ -39,6 +39,6 @@ Vue.use({
       }
     );
 
-    V.prototype.$axios = axios;
+    Vue.prototype.$axios = axios;
   }
 });

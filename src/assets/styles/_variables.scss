@@ -29,6 +29,17 @@ $colors: ();
 
 $theme-colors: ();
 
+// 마진, 패딩 (0 ~ 50)
+$spacers: ();
+@for $i from 0 through 50 {
+  $spacers: map-merge(
+    $spacers,
+    (
+      $i: $i * 0.25rem
+    )
+  );
+}
+
 // 폰트
 $font-family-cursive: 'Nothing You Could Do', cursive;
 $font-family-sans-serif: 'Noto Serif KR', serif;

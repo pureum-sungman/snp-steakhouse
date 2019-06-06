@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import App from './App.vue';
+import App from '@/views/App.vue';
 
 // Vue 플러그인
 import router from '@/plugins/vue-router';

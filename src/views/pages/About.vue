@@ -9,3 +9,5 @@ export default {
   name: 'ViewAbout'
 };
 </script>
+
+<style lang="scss" scoped></style>

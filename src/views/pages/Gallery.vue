@@ -9,3 +9,5 @@ export default {
   name: 'ViewGallery'
 };
 </script>
+
+<style lang="scss" scoped></style>

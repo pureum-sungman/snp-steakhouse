@@ -1,5 +1,6 @@
 <template>
   <div>
+    <router-link to="/about">About</router-link>
     <img alt="Vue logo" src="@/assets/images/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
     <h1 class="my-50">

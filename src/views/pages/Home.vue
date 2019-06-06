@@ -1,9 +1,6 @@
 <template>
   <div class="home">
-    <img
-      alt="Vue logo"
-      src="@/assets/images/logo.png"
-    />
+    <img alt="Vue logo" src="@/assets/images/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
     <h1>
       반응형 글씨 크기 h1

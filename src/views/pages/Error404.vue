@@ -7,7 +7,6 @@
     <button class="btn btn-primary">
       BS4 button test
     </button>
-
   </div>
 </template>
 

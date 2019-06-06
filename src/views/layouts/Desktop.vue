@@ -5,7 +5,19 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view />
+    <div class="my-5 py-5">
+      <h1>
+        DESKTOP LAYOUT
+      </h1>
+    </div>
   </div>
 </template>
 
-<style lang="scss"></style>
+<script>
+export default {
+  name: 'LayoutDesktop'
+};
+</script>
+
+
+<style lang="scss" scoped></style>

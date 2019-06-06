@@ -31,12 +31,19 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import HelloWorld from '@/views/components/HelloWorld.vue';
 
 export default {
   name: 'ViewHome',
   data() {
     return {};
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.$axios
+        .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+        .then(response => console.log(response));
+    });
   },
   methods: {},
   components: {

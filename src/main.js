@@ -1,5 +1,4 @@
 import Vue from 'vue';
-import App from '@/views/App.vue';
 
 // Vue 플러그인
 import router from '@/plugins/vue-router';
@@ -16,8 +15,10 @@ import 'bootstrap';
 
 Vue.config.productionTip = false;
 
-new Vue({
-    router,
-    store,
-    render: h => h(App)
-}).$mount('#app');
+const layout = window.innerWidth <= 576 ? 'Mobile' : 'Desktop';
+import(`@/views/layouts/${layout}.vue`)
+    .then(App => new Vue({
+        router,
+        store,
+        render: h => h(App.default)
+    }).$mount('#app'));

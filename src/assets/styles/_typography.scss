@@ -11,44 +11,44 @@
 $base: 0.875rem;
 
 .display-1 {
-    @include rfs($base * 4);
+  @include rfs($base * 4);
 }
 .display-2 {
-    @include rfs($base * 3.75);
+  @include rfs($base * 3.75);
 }
 .display-3 {
-    @include rfs($base * 3.5);
+  @include rfs($base * 3.5);
 }
 .display-4 {
-    @include rfs($base * 3.25);
+  @include rfs($base * 3.25);
 }
 .display-5 {
-    @include rfs($base * 3);
+  @include rfs($base * 3);
 }
 .display-6 {
-    @include rfs($base * 2.75);
+  @include rfs($base * 2.75);
 }
 h1,
 .h1 {
-    @include rfs($base * 2.5);
+  @include rfs($base * 2.5);
 }
 h2,
 .h2 {
-    @include rfs($base * 2.25);
+  @include rfs($base * 2.25);
 }
 h3,
 .h3 {
-    @include rfs($base * 2);
+  @include rfs($base * 2);
 }
 h4,
 .h4 {
-    @include rfs($base * 1.75);
+  @include rfs($base * 1.75);
 }
 h5,
 .h5 {
-    @include rfs($base * 1.5);
+  @include rfs($base * 1.5);
 }
 h6,
 .h6 {
-    @include rfs($base * 1.25);
+  @include rfs($base * 1.25);
 }

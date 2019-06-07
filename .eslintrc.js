@@ -1,7 +1,8 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
+    jquery: true
   },
   extends: ['plugin:vue/strongly-recommended', '@vue/prettier'],
   rules: {
@@ -13,7 +14,6 @@ module.exports = {
     parser: 'babel-eslint'
   },
   globals: {
-    'process': true,
-    'module': true
+    'process': true
   }
 };

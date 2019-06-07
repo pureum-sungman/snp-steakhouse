@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div id="page-home">
     <section id="recipes">
       <div class="row">
         <div class="col text-center">
@@ -31,7 +31,7 @@
 
 <script>
 export default {
-  name: 'ViewHome',
+  name: 'PageHome',
   data() {
     return {
       recipes: [{ title: 'A' }, { title: 'B' }, { title: 'C' }]

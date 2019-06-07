@@ -9555,6 +9555,11 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vue-cli-plugin-layouts@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/vue-cli-plugin-layouts/-/vue-cli-plugin-layouts-1.0.2.tgz#10c737db9ae63188fb21fc26740ac2af6a144c9c"
+  integrity sha512-wQkFiLCcwjyfYVeSU4XWatkVhBpIrQKNmh8JL6Oz865qD6MkMME7tzPsp7rvImnkCSCjMCfTbvimVWxrSw1tgg==
+
 vue-eslint-parser@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-2.0.3.tgz#c268c96c6d94cfe3d938a5f7593959b0ca3360d1"
@@ -9578,6 +9583,11 @@ vue-eslint-parser@^5.0.0:
     espree "^4.1.0"
     esquery "^1.0.1"
     lodash "^4.17.11"
+
+vue-extend-layout@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/vue-extend-layout/-/vue-extend-layout-2.0.6.tgz#f76e368343c0afd80b9f0e07b0be5b3f5013a416"
+  integrity sha512-wzKOoeWPR0z4goWyHWy7mBYDqVoO1th4DexEv34cqhOqp41wpCwVfZMI0N85Nwxyis/FloGvX+PAhU03I4BUsA==
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.3"

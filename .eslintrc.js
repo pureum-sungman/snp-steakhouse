@@ -14,6 +14,7 @@ module.exports = {
     parser: 'babel-eslint'
   },
   globals: {
-    process: true
+    process: true,
+    module: true
   }
 };

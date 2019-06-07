@@ -12,6 +12,6 @@
 
 <script>
 export default {
-  name: 'ViewError404'
+  name: 'PageError404'
 };
 </script>

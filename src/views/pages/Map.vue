@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'ViewMap'
+  name: 'PageMap'
 };
 </script>

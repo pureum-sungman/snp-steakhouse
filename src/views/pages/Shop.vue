@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'ViewShop'
+  name: 'PageShop'
 };
 </script>

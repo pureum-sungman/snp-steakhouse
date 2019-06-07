@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'ViewMenu'
+  name: 'PageMenu'
 };
 </script>

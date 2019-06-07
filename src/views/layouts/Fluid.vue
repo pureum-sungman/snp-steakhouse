@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col">
           <main role="main">
-            <router-view />
+            <router-view name="default" />
           </main>
         </div>
         <!-- .col -->

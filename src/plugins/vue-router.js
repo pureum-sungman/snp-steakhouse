@@ -7,6 +7,8 @@ export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
+    { path: '/home', redirect: '/' },
+    { path: '/index', redirect: '/' },
     {
       path: '/',
       name: 'PageHome',

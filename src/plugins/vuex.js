@@ -3,6 +3,7 @@ import Vuex from 'vuex';
 import {
   includes as _includes,
   unionBy as _unionBy,
+  find as _find,
   findIndex as _findIndex,
   orderBy as _orderBy
 } from 'lodash';
@@ -27,8 +28,24 @@ export default new Vuex.Store({
       });
     }
   },
+  getters: {
+    getAllRecipes: state => state.recipes,
+    getRecipeById: (state /* getters, rootState, rootGetters */) => id => {
+      return _find(state.recipes, { RECIPE_ID: id });
+    },
+    getRecipeByType: (state /* getters, rootState, rootGetters */) => type => {
+      return _find(state.recipes, { TY_NM: type });
+    },
+    getRecipeByName: (state /* getters, rootState, rootGetters */) => name => {
+      return _find(state.recipes, { RECIPE_NM_KO: name });
+    }
+  },
   actions: {
+    /**
+     * 샘플 레시피 정보 초기화 함수
+     **/
     initRecipes(ctx) {
+      // 검색 키워드 배열
       const keywords = [
         '스테이크',
         '샐러드',
@@ -67,14 +84,14 @@ export default new Vuex.Store({
         });
 
         // 재료 배열 (INGREDIENTS)
-        // 'RECIPE_ID' 기준으로 필터링
+        // 1. 'RECIPE_ID' 기준으로 필터링
         const INGREDIENTS = RecipeIngredient.data.filter(ing => {
           return ing.RECIPE_ID === recipe.RECIPE_ID;
         });
 
         // 조리 과정 배열 (PROCESS)
-        // 'RECIPE_ID' 기준으로 필터링
-        // 'COOKING_NO' 기준으로 오름차순 정렬
+        // 1. 'RECIPE_ID' 기준으로 필터링
+        // 2. 'COOKING_NO' 기준으로 오름차순 정렬
         const PROCESS = _orderBy(
           RecipeProcess.data.filter(prcs => {
             return prcs.RECIPE_ID === recipe.RECIPE_ID;

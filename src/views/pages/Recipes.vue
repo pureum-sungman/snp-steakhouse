@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'ViewRecipes'
+  name: 'PageRecipes'
 };
 </script>

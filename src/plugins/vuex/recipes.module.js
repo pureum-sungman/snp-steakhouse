@@ -9,5 +9,11 @@ export default {
   },
   getters: {},
   mutations: {},
-  actions: {}
+  actions: {
+    init() {
+      $.getJSON('@/assets/data/recipe_default.json', recipes => {
+        console.log(recipes);
+      });
+    }
+  }
 };

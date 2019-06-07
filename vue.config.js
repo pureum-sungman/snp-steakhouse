@@ -17,6 +17,9 @@ module.exports = {
           path.join(__dirname, './src/assets/scripts/**/*.js')
         ])
       })
-    ]
+    ],
+    externals: {
+      jquery: 'jQuery'
+    }
   }
 };

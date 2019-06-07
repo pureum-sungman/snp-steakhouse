@@ -43,7 +43,8 @@
     "purgecss-webpack-plugin": "^1.5.0",
     "sass-loader": "^7.1.0",
     "vue-cli-plugin-layouts": "^1.0.2",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.33.0"
   },
   "gitHooks": {},
   "lint-staged": {

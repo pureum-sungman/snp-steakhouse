@@ -9,6 +9,9 @@ import VueExtendLayouts from 'vue-extend-layout';
 
 export default {
   name: 'App',
-  components: { VueExtendLayouts }
+  components: { VueExtendLayouts },
+  mounted() {
+    this.$store.dispatch('recipes/init');
+  }
 };
 </script>

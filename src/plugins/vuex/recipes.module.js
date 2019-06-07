@@ -1,3 +1,7 @@
+// import RecipeDefault from '@/assets/data/recipe_default.json';
+// import RecipeIngredient from '@/assets/data/recipe_Ingredient.json';
+// import RecipeProcess from '@/assets/data/recipe_process.json';
+
 export default {
   namespaced: true,
   state: {
@@ -11,10 +15,6 @@ export default {
   getters: {},
   mutations: {},
   actions: {
-    init() {
-      $.getJSON('@/assets/data/recipe_default.json', recipes => {
-        console.log(recipes);
-      });
-    }
+    init() {}
   }
 };

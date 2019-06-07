@@ -2,7 +2,6 @@
   <div page="home">
     <home-section-recipes />
   </div>
-  <!-- .container -->
 </template>
 
 <script>

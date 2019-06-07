@@ -6,7 +6,6 @@
 
 <script>
 import VueExtendLayouts from 'vue-extend-layout';
-import { Promise } from 'q';
 
 export default {
   name: 'App',
@@ -16,7 +15,7 @@ export default {
       .then(() => this.$store.dispatch('initRecipes'))
       .then(() => {
         this.$store.state.recipes.forEach(recipe => {
-          console.log(recipe.RECIPE_NM_KO);
+          console.log(recipe);
         });
       });
   }

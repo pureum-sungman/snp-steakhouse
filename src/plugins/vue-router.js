@@ -15,7 +15,7 @@ export default new Router({
       name: 'PageHome',
       component: () => import('@/views/pages/Home.vue'),
       meta: {
-        layout: 'Default'
+        layout: 'Fluid'
       }
     },
     {

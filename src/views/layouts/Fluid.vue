@@ -3,9 +3,6 @@
     <div class="row">
       <div class="col-12">
         <main role="main">
-          <h1>
-            fluid layout
-          </h1>
           <router-view />
         </main>
       </div>

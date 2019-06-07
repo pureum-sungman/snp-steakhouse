@@ -3,9 +3,6 @@
     <div class="row">
       <div class="col">
         <main role="main">
-          <h1>
-            default layout
-          </h1>
           <router-view />
         </main>
       </div>

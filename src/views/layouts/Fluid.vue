@@ -1,6 +1,6 @@
 <template>
   <div layout="fluid">
-    <div class="container-fluid" role="document">
+    <div class="container-fluid px-0 overflow-x-hidden" role="document">
       <div class="row">
         <div class="col">
           <main role="main">

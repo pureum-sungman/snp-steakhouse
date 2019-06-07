@@ -1,46 +1,20 @@
 <template>
   <div page="home">
-    <section id="recipes">
-      <div class="row">
-        <div class="col text-center">
-          <h1 class="font-cursive display-1">
-            Recipes
-          </h1>
-        </div>
-        <!-- .col -->
-      </div>
-      <!-- .row -->
-      <div class="row">
-        <div
-          v-for="(recipe, index) in recipes"
-          :key="index"
-          class="col-12 col-md-6 col-lg-4"
-        >
-          <h1 class="font-cursive">
-            {{ recipe.title }}
-          </h1>
-        </div>
-        <!-- .col-12 col-md-6 col-lg-4 -->
-      </div>
-      <!-- .row -->
-    </section>
-    <!-- #recipes -->
+    <!-- 
+      Carosuel: BEGIN 
+      1. Vuex의 현재 'isMobile' 값에 따라서 디스플레이 여부 결정
+    -->
+    <!-- <home-mobile-carousel v-if="!$store.state.isMobile" /> -->
+    <home-mobile-carousel v-if="true" />
+    <!-- Carosuel: END -->
   </div>
-  <!-- .container -->
 </template>
 
 <script>
 export default {
   name: 'PageHome',
-  data() {
-    return {
-      recipes: [{ title: 'A' }, { title: 'B' }, { title: 'C' }]
-    };
-  },
-  mounted() {
-    this.$nextTick(() => {});
-  },
-  methods: {},
-  components: {}
+  components: {
+    HomeMobileCarousel: () => import('@/views/components/HomeMobileCarousel/Index.vue') // prettier-ignore
+  }
 };
 </script>

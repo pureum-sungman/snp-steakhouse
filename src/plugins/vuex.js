@@ -16,6 +16,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   strict: process.env.NODE_ENV !== 'production',
   state: {
+    isMobile: false,
     recipes: []
   },
   mutations: {
@@ -41,6 +42,9 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    checkWindowWidth(ctx) {
+      ctx.commit('set', { isMobile: window.innerWidth <= 768 });
+    },
     /**
      * 샘플 레시피 정보 초기화 함수
      **/

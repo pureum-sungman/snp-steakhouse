@@ -1,16 +1,19 @@
 <template>
-  <div class="container-fluid" layout="fluid" role="document">
-    <div class="row">
-      <div class="col-12">
-        <main role="main">
-          <router-view />
-        </main>
+  <div layout="fluid">
+    <div class="container-fluid" role="document">
+      <div class="row">
+        <div class="col-12">
+          <main role="main">
+            <router-view />
+          </main>
+        </div>
+        <!-- .col-12 -->
       </div>
-      <!-- .col-12 -->
+      <!-- .row -->
     </div>
-    <!-- .row -->
+    <!-- .container-fluid -->
   </div>
-  <!-- .container-fluid -->
+  <!-- [layout="fluid"] -->
 </template>
 
 <script>

@@ -1,25 +1,28 @@
 <template>
-  <div class="container" layout="sidebar" role="document">
-    <div class="row">
-      <div class="col-8">
-        <main role="main">
-          <router-view />
-        </main>
+  <div layout="sidebar">
+    <div class="container" role="document">
+      <div class="row">
+        <div class="col-9">
+          <main role="main">
+            <router-view />
+          </main>
+        </div>
+        <!-- .col-9 -->
+        <div class="col-3">
+          <aside>
+            <div
+              v-for="(component, index) in $route.meta.sidebarComponents"
+              :key="index"
+            ></div>
+          </aside>
+        </div>
+        <!-- .col-3 -->
       </div>
-      <!-- .col-8 -->
-      <div class="col-4">
-        <aside>
-          <div
-            v-for="(component, index) in $route.meta.sidebarComponents"
-            :key="index"
-          ></div>
-        </aside>
-      </div>
-      <!-- .col-4 -->
+      <!-- .row -->
     </div>
-    <!-- .row -->
+    <!-- .container -->
   </div>
-  <!-- .container -->
+  <!-- [layout="sidebar"] -->
 </template>
 
 <script>

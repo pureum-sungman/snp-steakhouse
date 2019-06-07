@@ -1,9 +1,9 @@
 <template>
-  <div component="sidebar-a">
+  <div component="sidebar-b">
     <div class="card">
       <div class="card-header">
         <h1 class="card-title">
-          Sidebar A
+          Sidebar B
         </h1>
         <!-- .card-title -->
       </div>
@@ -18,12 +18,12 @@
     </div>
     <!-- .card -->
   </div>
-  <!-- [component="sidebar-a"] -->
+  <!-- [component="sidebar-b"] -->
 </template>
 
 <script>
 export default {
-  name: 'ComponentSidebarA',
+  name: 'ComponentSidebarB',
   data() {
     return {};
   }

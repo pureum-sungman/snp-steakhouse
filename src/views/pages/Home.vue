@@ -1,5 +1,5 @@
 <template>
-  <div id="page-home">
+  <div page="home">
     <section id="recipes">
       <div class="row">
         <div class="col text-center">

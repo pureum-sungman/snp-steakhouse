@@ -21,7 +21,10 @@ export default new Router({
       component: () => import('@/views/pages/About.vue'),
       meta: {
         layout: 'Sidebar',
-        sidebarComponents: [import('@/views/components/SidebarA.vue')]
+        sidebarComponents: [
+          import('@/views/components/SidebarA.vue'),
+          import('@/views/components/SidebarB.vue')
+        ]
       }
     },
     {

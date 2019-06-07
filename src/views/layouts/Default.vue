@@ -1,16 +1,19 @@
 <template>
-  <div class="container" layout="default" role="document">
-    <div class="row">
-      <div class="col">
-        <main role="main">
-          <router-view />
-        </main>
+  <div layout="default">
+    <div class="container" role="document">
+      <div class="row">
+        <div class="col">
+          <main role="main">
+            <router-view />
+          </main>
+        </div>
+        <!-- .col -->
       </div>
-      <!-- .col -->
+      <!-- .row -->
     </div>
-    <!-- .row -->
+    <!-- .container -->
   </div>
-  <!-- .container -->
+  <!-- [layout="default"] -->
 </template>
 
 <script>

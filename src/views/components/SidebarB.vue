@@ -15,6 +15,13 @@
         <!-- .card-text -->
       </div>
       <!-- .card-body -->
+      <div class="card-footer">
+        <a href="#" class="card-link">
+          Card link
+        </a>
+        <!-- .card-link -->
+      </div>
+      <!-- .card-footer -->
     </div>
     <!-- .card -->
   </div>

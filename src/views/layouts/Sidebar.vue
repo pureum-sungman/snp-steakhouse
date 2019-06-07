@@ -9,12 +9,7 @@
         </div>
         <!-- .col-9 -->
         <div class="col-3">
-          <aside>
-            <div
-              v-for="(component, index) in $route.meta.sidebarComponents"
-              :key="index"
-            ></div>
-          </aside>
+          <aside></aside>
         </div>
         <!-- .col-3 -->
       </div>
@@ -29,18 +24,9 @@
 export default {
   name: 'LayoutSidebar',
   beforeCreate() {
-    console.log(this.$route.meta.sidebarComponents);
-  },
-  created() {
-    console.log(this.$route.meta.sidebarComponents);
-  },
-  beforeMount() {
-    console.log(this.$route.meta.sidebarComponents);
-  },
-  mounted() {
-    // this.$nextTick(() => {
-    //   console.log(this.$route.meta.sidebarComponents);
-    // });
+    Promise.all(this.$route.meta.sidebarComponents).then(modules => {
+      console.log(modules);
+    });
   }
 };
 </script>

@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+// import store from '@/plugins/vuex';
 
 Vue.use(Router);
 
@@ -52,6 +53,16 @@ export default new Router({
       name: 'PageRecipes',
       component: () => import('@/views/pages/Recipes.vue'),
       meta: { layout: 'Default' }
+    },
+    {
+      path: '/recipes/:id',
+      name: 'PageRecipe',
+      component: () => import('@/views/pages/Recipe.vue'),
+      meta: { layout: 'Sidebar' },
+      beforeEnter(to, from, next) {
+        // const recipe = store.getters.getRecipeById(to.params.id);
+        next();
+      }
     },
     {
       path: '/shop',

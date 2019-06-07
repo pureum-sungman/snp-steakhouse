@@ -2,12 +2,12 @@
   <div layout="fluid">
     <div class="container-fluid" role="document">
       <div class="row">
-        <div class="col-12">
+        <div class="col">
           <main role="main">
             <router-view />
           </main>
         </div>
-        <!-- .col-12 -->
+        <!-- .col -->
       </div>
       <!-- .row -->
     </div>

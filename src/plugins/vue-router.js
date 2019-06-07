@@ -11,7 +11,9 @@ export default new Router({
       path: '/',
       name: 'PageHome',
       component: () => import('@/views/pages/Home.vue'),
-      meta: { layout: 'Default' }
+      meta: {
+        layout: 'Default'
+      }
     },
     {
       path: '/about',

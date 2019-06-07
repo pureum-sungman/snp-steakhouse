@@ -58,7 +58,10 @@ export default new Router({
       path: '/recipes/:id',
       name: 'PageRecipe',
       component: () => import('@/views/pages/Recipe.vue'),
-      meta: { layout: 'Sidebar' },
+      meta: {
+        layout: 'Sidebar',
+        sidebarComponents: []
+      },
       beforeEnter(to, from, next) {
         // const recipe = store.getters.getRecipeById(to.params.id);
         next();

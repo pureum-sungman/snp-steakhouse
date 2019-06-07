@@ -1,6 +1,6 @@
 <template>
   <div page="home">
-    <home-section-recipes />
+    <home-mobile-carousel v-show="$store.state.isMobile" />
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   name: 'PageHome',
   components: {
-    HomeSectionRecipes: () => import('@/views/components/HomeSectionRecipes.vue') // prettier-ignore
+    HomeMobileCarousel: () => import('@/views/components/HomeMobileCarousel.vue') // prettier-ignore
   }
 };
 </script>

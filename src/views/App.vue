@@ -16,13 +16,13 @@ export default {
       this.windowResizeEventHandler();
       window.dispatchEvent(new Event('resize'));
 
-      Promise.resolve()
-        .then(() => this.$store.dispatch('initRecipes'))
-        .then(() => {
-          this.$store.state.recipes.forEach(recipe => {
-            console.log(recipe);
-          });
-        });
+      // Promise.resolve()
+      //   .then(() => this.$store.dispatch('initRecipes'))
+      //   .then(() => {
+      //     this.$store.state.recipes.forEach(recipe => {
+      //       console.log(recipe);
+      //     });
+      //   });
     });
   },
   methods: {

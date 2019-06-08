@@ -38,7 +38,7 @@ export default new Router({
     },
     {
       path: '/map',
-      name: 'Pagemap',
+      name: 'PageMap',
       component: () => import('@/views/pages/Map.vue'),
       meta: { layout: 'Default' }
     },

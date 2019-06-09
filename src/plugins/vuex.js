@@ -17,6 +17,7 @@ export default new Vuex.Store({
   strict: process.env.NODE_ENV !== 'production',
   state: {
     isMobile: false,
+    pageTransitionEffect: 'fade',
     recipes: []
   },
   mutations: {

@@ -6,7 +6,11 @@
 
 <script>
 import VueExtendLayouts from 'vue-extend-layout';
-import { debounce as _debounce } from 'lodash';
+import {
+  debounce as _debounce
+  //  get as _get,
+  //   isNil as _isNil
+} from 'lodash';
 
 export default {
   name: 'App',
@@ -15,17 +19,22 @@ export default {
     this.$nextTick(() => {
       this.windowResizeEventHandler();
       window.dispatchEvent(new Event('resize'));
-
-      // Promise.resolve()
-      //   .then(() => this.$store.dispatch('initRecipes'))
-      //   .then(() => {
-      //     this.$store.state.recipes.forEach(recipe => {
-      //       console.log(recipe);
-      //     });
-      //   });
     });
   },
+  watch: {
+    // $route(to, from) { this.updatePageTransitionEffect(to, from); }
+  },
   methods: {
+    // updatePageTransitionEffect(to, from) {
+    //   // 뷰 라우터 'navbarIndex' 메타 값 기준으로 페이지 전환 효과 업데이트
+    //   const toIndex = _get(to, ['meta', 'navbarIndex'], null);
+    //   const fromIndex = _get(from, ['meta', 'navbarIndex'], null);
+    //   if (!_isNil(toIndex) && !_isNil(fromIndex)) {
+    //     this.$store.dispatch('set', {
+    //       pageTransitionEffect: toIndex > fromIndex ? 'slide-left' : 'slide-right' // prettier-ignore
+    //     });
+    //   }
+    // },
     windowResizeEventHandler() {
       // 윈도우 리사이즈 이벤트에 맞춰 Vuex 'isMobile' 값 업데이트
       window.addEventListener(

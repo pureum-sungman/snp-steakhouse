@@ -5,9 +5,9 @@
  * 2. 사용 예시
  *    <unicon
  *        name="car-wash" (이름)
- *        width="120" (가로 px)
- *        height="100" (세로 px)
- *        fill="#f99" (색 hex)
+ *        width="120"     (가로 px)
+ *        height="100"    (세로 px)
+ *        fill="#f99"     (색 hex)
  *    />
  **/
 import Vue from 'vue';

@@ -30,7 +30,11 @@ export default {
       // 윈도우 리사이즈 이벤트에 맞춰 Vuex 'isMobile' 값 업데이트
       window.addEventListener(
         'resize',
-        _debounce(() => this.$store.dispatch('checkWindowWidth'), 250)
+        _debounce(() => {
+          this.$store.dispatch('set', {
+            isMobile: window.innerWidth <= 768
+          });
+        }, 250)
       );
     }
   }

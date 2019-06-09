@@ -49,9 +49,6 @@ export default new Vuex.Store({
         ctx.commit('set', commitObj);
       });
     },
-    checkWindowWidth(ctx) {
-      ctx.commit('set', { isMobile: window.innerWidth <= 768 });
-    },
     /**
      * 샘플 레시피 정보 초기화 함수
      **/

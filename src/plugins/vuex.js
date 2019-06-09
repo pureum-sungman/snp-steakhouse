@@ -42,6 +42,13 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    set(ctx, payload = {}) {
+      Object.keys(payload).forEach(key => {
+        const commitObj = {};
+        commitObj[key] = payload[key];
+        ctx.commit('set', commitObj);
+      });
+    },
     checkWindowWidth(ctx) {
       ctx.commit('set', { isMobile: window.innerWidth <= 768 });
     },

@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-9">
           <main role="main">
-            <router-view name="default" />
+            <router-view-wrapper router-name="default" />
           </main>
         </div>
         <!-- .col-9 -->
@@ -22,11 +22,14 @@
       <!-- .row -->
     </div>
     <!-- .container -->
+    <mobile-navbar-bottom v-if="$store.state.isMobile" />
   </div>
   <!-- [layout="sidebar"] -->
 </template>
 
 <script>
+import RouterViewWrapper from '@/views/components/RouterViewWrapper.vue';
+
 export default {
   name: 'LayoutSidebar',
   data() {
@@ -39,6 +42,12 @@ export default {
       Promise.all(this.$route.meta.sidebarComponents).then(modules => {
         modules.forEach(module => this.sidebarComponents.push(module.default));
       });
+    }
+  },
+  components: {
+    RouterViewWrapper,
+    MobileNavbarBottom: () => {
+      return import('@/views/components/MobileNavbarBottom.vue');
     }
   }
 };

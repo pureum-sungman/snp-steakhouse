@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col">
           <main role="main">
-            <router-view name="default" />
+            <router-view-wrapper router-name="default" />
           </main>
         </div>
         <!-- .col -->
@@ -12,13 +12,22 @@
       <!-- .row -->
     </div>
     <!-- .container-fluid -->
+    <mobile-navbar-bottom v-if="$store.state.isMobile" />
   </div>
   <!-- [layout="fluid"] -->
 </template>
 
 <script>
+import RouterViewWrapper from '@/views/components/RouterViewWrapper.vue';
+
 export default {
-  name: 'LayoutFluid'
+  name: 'LayoutFluid',
+  components: {
+    RouterViewWrapper,
+    MobileNavbarBottom: () => {
+      return import('@/views/components/MobileNavbarBottom.vue');
+    }
+  }
 };
 </script>
 

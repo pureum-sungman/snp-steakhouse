@@ -25,6 +25,7 @@ export default {
   components: {
     RouterViewWrapper,
     MobileNavbarBottom: () => {
+      // 반응형 컴포넌트는 레이지 로딩을 위해 함수 형식으로 가져올 것
       return import('@/views/components/MobileNavbarBottom.vue');
     }
   }

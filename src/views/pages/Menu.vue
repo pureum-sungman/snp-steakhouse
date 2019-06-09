@@ -1,6 +1,10 @@
 <template>
   <div page="menu">
-    <h1>This is an menu page</h1>
+    <div class="row">
+      <div class="col-3"></div>
+      <!-- .col-3 -->
+    </div>
+    <!-- .row -->
   </div>
 </template>
 

@@ -35,9 +35,11 @@ export default {
     };
   },
   beforeCreate() {
-    Promise.all(this.$route.meta.sidebarComponents).then(modules => {
-      modules.forEach(module => this.sidebarComponents.push(module.default));
-    });
+    if (this.$route.meta.sidebarComponents.length > 0) {
+      Promise.all(this.$route.meta.sidebarComponents).then(modules => {
+        modules.forEach(module => this.sidebarComponents.push(module.default));
+      });
+    }
   }
 };
 </script>

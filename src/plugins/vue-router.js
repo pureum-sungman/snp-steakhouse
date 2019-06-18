@@ -47,7 +47,7 @@ export default new Router({
       path: '/recipes',
       name: 'PageRecipes',
       component: () => import('@/views/pages/Recipes.vue'),
-      meta: { layout: 'Default' }
+      meta: { layout: 'Fluid' }
     },
     {
       path: '/shop',

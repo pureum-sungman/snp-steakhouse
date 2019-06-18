@@ -1,7 +1,6 @@
 <template>
   <div page="about">
-    <h1>This is an about</h1>
-    <h1>Test</h1>
+    <h1>new content</h1>
   </div>
 </template>
 

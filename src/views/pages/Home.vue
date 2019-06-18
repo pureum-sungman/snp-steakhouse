@@ -45,7 +45,6 @@
     <!-- #recipes -->
     <modal />
   </div>
-  <!-- .container -->
 </template>
 
 <script>
@@ -89,9 +88,7 @@ export default {
     
   },
   methods: {},
-  components: {
-    // Modal: ()=> import('@/views/components/Modal.vue')
-  }
+  components: {}
 };
 </script>
 

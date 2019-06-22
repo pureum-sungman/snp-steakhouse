@@ -3,7 +3,7 @@ import Vuex from 'vuex';
 import { get as _get, find as _find, isNil as _isNil } from 'lodash';
 
 // 샘플 데이터 - 레시피
-import recipeData from '@/assets/data/recipe';
+import { recipeData, recipeCategories } from '@/assets/data/recipe';
 
 Vue.use(Vuex);
 
@@ -12,7 +12,8 @@ export default new Vuex.Store({
   state: {
     isMobile: false,
     pageTransitionEffect: 'fade',
-    recipes: recipeData
+    recipes: recipeData,
+    recipeCategories
   },
   mutations: {
     set(state, { target, key, value }) {

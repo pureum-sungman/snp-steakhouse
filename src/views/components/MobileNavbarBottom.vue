@@ -1,7 +1,7 @@
 <template>
   <nav
     component="mobile-navbar-bottom"
-    class="navbar fixed-bottom navbar-light bg-light"
+    class="navbar fixed-bottom navbar-dark bg-primary"
   >
     <ul
       class="
@@ -19,8 +19,8 @@
         :to="router.to"
       >
         <a class="nav-link">
-          <unicon :name="router.icon" />
-          {{ router.label }}
+          <unicon :name="router.icon" fill="#fff" />
+          <!-- {{ router.label }} -->
         </a>
       </router-link>
     </ul>

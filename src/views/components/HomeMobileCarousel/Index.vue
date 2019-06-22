@@ -2,6 +2,7 @@
   <div component="home-mobile-carousel">
     <div class="swiper-container bg-primary" gallery="main">
       <div class="swiper-wrapper">
+        <main-about-slider />
         <main-slide
           v-for="elem in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
           :key="elem"
@@ -32,6 +33,7 @@
 <script>
 import Swiper from 'swiper';
 import { isNil as _isNil } from 'lodash';
+import MainAboutSlider from './MainAboutSlider';
 import MainSlide from './MainSlide';
 import ThumbSlide from './ThumbSlide.vue';
 
@@ -39,25 +41,20 @@ export default {
   name: 'ComponentHomeMobileCarousel',
   data() {
     return {
-      thumbGallerySwiperInstance: null,
-      mainGallerySwiperInstance: null
+      thumbSwiper: null,
+      mainSwiper: null
     };
   },
   mounted() {
     this.$nextTick(() => {
-      if (
-        _isNil(this.thumbGallerySwiperInstance) &&
-        _isNil(this.mainGallerySwiperInstance)
-      ) {
-        this.thumbGallerySwiperInstance = this.initializeThumbGallerySwiper();
-        this.mainGallerySwiperInstance = this.initializeMainGallerySwiper(
-          this.thumbGallerySwiperInstance
-        );
+      if (_isNil(this.thumbSwiper) && _isNil(this.mainSwiper)) {
+        this.thumbSwiper = this.initThumbSwiper();
+        this.mainSwiper = this.initMainSwiper(this.thumbSwiper);
       }
     });
   },
   methods: {
-    initializeThumbGallerySwiper() {
+    initThumbSwiper() {
       return new Swiper(
         // 셀렉터
         '[component="home-mobile-carousel"] .swiper-container[gallery="thumb"]',
@@ -72,7 +69,7 @@ export default {
         }
       );
     },
-    initializeMainGallerySwiper(thumbGallerySwiperInstance) {
+    initMainSwiper(thumbSwiper) {
       return new Swiper(
         // 셀렉터
         '[component="home-mobile-carousel"] .swiper-container[gallery="main"]',
@@ -85,7 +82,7 @@ export default {
             prevEl: '.swiper-button-prev'
           },
           thumbs: {
-            swiper: thumbGallerySwiperInstance
+            swiper: thumbSwiper
           }
         }
       );
@@ -93,7 +90,8 @@ export default {
   },
   components: {
     MainSlide,
-    ThumbSlide
+    ThumbSlide,
+    MainAboutSlider
   }
 };
 </script>

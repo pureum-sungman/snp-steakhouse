@@ -7,6 +7,7 @@ Vue.use(Router);
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
+
   routes: [
     { path: '/home', redirect: '/' },
     { path: '/index', redirect: '/' },
@@ -27,7 +28,8 @@ export default new Router({
         sidebarComponents: [
           import('@/views/components/SidebarA.vue'),
           import('@/views/components/SidebarB.vue')
-        ]
+        ],
+        navbarIndex: 0
       }
     },
     {
@@ -38,7 +40,7 @@ export default new Router({
     },
     {
       path: '/map',
-      name: 'Pagemap',
+      name: 'PageMap',
       component: () => import('@/views/pages/Map.vue'),
       meta: { layout: 'Default' }
     },
@@ -46,13 +48,13 @@ export default new Router({
       path: '/menu',
       name: 'PageMenu',
       component: () => import('@/views/pages/Menu.vue'),
-      meta: { layout: 'Fluid' }
+      meta: { layout: 'Fluid', navbarIndex: 1 }
     },
     {
       path: '/recipes',
       name: 'PageRecipes',
       component: () => import('@/views/pages/Recipes.vue'),
-      meta: { layout: 'Fluid' }
+      meta: { layout: 'Default', navbarIndex: 2 }
     },
     {
       path: '/recipes/:id',
@@ -71,7 +73,7 @@ export default new Router({
       path: '/shop',
       name: 'PageShop',
       component: () => import('@/views/pages/Shop.vue'),
-      meta: { layout: 'Default' }
+      meta: { layout: 'Default', navbarIndex: 3 }
     },
     {
       path: '*',

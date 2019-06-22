@@ -5,6 +5,7 @@ import App from '@/views/App.vue'; // 베이스 컴포넌트
 import router from '@/plugins/vue-router';
 import store from '@/plugins/vuex';
 import '@/plugins/axios';
+import '@/plugins/vue-unicons';
 
 // 스타일
 import './assets/styles/main.scss';

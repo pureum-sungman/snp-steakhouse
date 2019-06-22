@@ -37,24 +37,29 @@
   font-weight: 400;
 }
 
-// 폰트 크기
+// 그림자
+.text-shadow {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+// 크기
 .display-1 {
-  @include rfs($font-size-base * 4);
+  @include rfs($font-size-base * 8);
 }
 .display-2 {
-  @include rfs($font-size-base * 3.75);
+  @include rfs($font-size-base * 7);
 }
 .display-3 {
-  @include rfs($font-size-base * 3.5);
+  @include rfs($font-size-base * 6);
 }
 .display-4 {
-  @include rfs($font-size-base * 3.25);
+  @include rfs($font-size-base * 5);
 }
 .display-5 {
-  @include rfs($font-size-base * 3);
+  @include rfs($font-size-base * 4);
 }
 .display-6 {
-  @include rfs($font-size-base * 2.75);
+  @include rfs($font-size-base * 3);
 }
 h1,
 .h1 {

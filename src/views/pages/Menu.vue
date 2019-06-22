@@ -55,8 +55,8 @@
       <div class="detail ho1"></div>
       <div class="detail ho2"></div>
     </div>
-    
   </div>
+  <!-- [page="menu"] -->
 </template>
 
 <script>
@@ -167,4 +167,3 @@ export default {
 }
 
 </style>
-

@@ -2,11 +2,17 @@
 // 꼭 최상단에 import 할 것
 @import './variables';
 
+// 부트스트랩 4 모듈
+@import '~bootstrap/scss/bootstrap';
+
 // 구글 폰트 & 글씨 관련 스타일
 @import './typography';
 
 // 유틸리티 스타일 클래스 모음
 @import './utilities';
 
-// 부트스트랩 4 모듈
-@import '~bootstrap/scss/bootstrap';
+// SCSS 커스텀 Mixin 모음
+@import './mixins';
+
+// 트랜지션 이펙트 모음
+@import './transitions';

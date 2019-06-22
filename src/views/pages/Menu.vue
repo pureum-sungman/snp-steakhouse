@@ -1,91 +1,170 @@
 <template>
   <div page="menu">
-    <div class="Fmenu">
-      <div class="menus">
-        <div class="menu steak">
-          <div class="image"></div>
-        </div>
-        <div class="menu pastas">
-          <div class="image"></div>
-        </div>
-        <div class="menu SandP">
-          <span class="detail L i1"></span>
-          <span class="detail R i2"></span>
-        </div>
-        <div class="menu salads">
-          <div class="detail R image"></div>
-          <span class="detail L i3"></span>
-        </div>
-        <div class="menu desserts">
-          <div class="detail L image"></div>
-          <span class="detail R i4"></span>
-        </div>
-        <div class="menu drink">
-          <div class="detail R image"></div>
-          <span class="detail L i5"></span>
+    <div class="bg">
+      <div class="menu">
+        <div class="menu_view">
+          <div class="lists ho1">
+            <h3>LIST1</h3>
+            <div class="list">
+              <span>List1 span1</span>
+              <span>List1 span2</span>
+              <span>List1 span3</span>
+              <span>List1 span4</span>
+            </div>
+          </div>
+          <div class="lists ho2">
+            <h3>LIST2</h3>
+            <div class="list">
+              <span>List2 span1</span>
+              <span>List2 span2</span>
+              <span>List2 span3</span>
+              <span>List2 span4</span>
+            </div>
+          </div>
+          <div class="lists ho3">
+            <h3>LIST3</h3>
+            <div class="list">
+              <span>List3 span1</span>
+              <span>List3 span2</span>
+              <span>List3 span3</span>
+              <span>List3 span4</span>
+            </div>
+          </div>
+          <div class="lists ho4">
+            <h3>LIST4</h3>
+            <div class="list">
+              <span>List4 span1</span>
+              <span>List4 span2</span>
+              <span>List4 span3</span>
+              <span>List4 span4</span>
+            </div>
+          </div>
+          <div class="lists ho5">
+            <h3>LIST5</h3>
+            <div class="list">
+              <span>List5 span1</span>
+              <span>List5 span2</span>
+              <span>List5 span3</span>
+              <span>List5 span4</span>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="detail ho-default on"></div>
+      <div class="detail ho"></div>
+      <div class="detail ho1"></div>
+      <div class="detail ho2"></div>
     </div>
+    
   </div>
 </template>
 
 <script>
 export default {
-  name: 'PageMenu'
-};
+  name: 'PageMenu',
+  mounted() {
+    this.$nextTick(() => {
+      
+        const menuLists = ['.ho1', '.ho2', '.ho3', '.ho4', '.ho5'];
+
+        menuLists.forEach( menuList => {
+          const view = document.querySelector('.menu_view'); 
+          const check = document.querySelectorAll('.lists'); 
+          const menu = document.querySelector('.lists' + menuList);
+          const check_d= document.querySelectorAll('.detail');
+          const detail = document.querySelector('.detail' + menuList);
+          const list = menu.querySelector('.list');
+
+          menu.addEventListener('click', function(){
+            check.forEach( key => {
+              key.classList.remove('on');
+                key.querySelector('.list').classList.remove('on');
+            });
+                this.classList.add('on');
+                list.classList.add('on');
+            check_d.forEach( key => {
+              key.classList.remove('view');
+            });
+            detail.classList.add('view');
+
+          })
+            
+        });
+    });
+  }
+}
+
 </script>
 
 <style lang="scss" scoped>
-  .L{left: 0;} .R{right: 0;}
-  .menus{
+*{padding: 0; margin:0;}
+  .bg{
+    overflow: hidden;
     position: relative;
-    max-width: 440px;
+    width: 100vw;
     height: 100vh;
-    background: url('https://i.pinimg.com/736x/c1/d2/3c/c1d23cc78ba5492e7a64db3210efb685--chalkboard-fonts-kitchen-chalkboard.jpg') no-repeat;
-    background-size: contain;
+    background: url('../../assets/images/MenuBg2.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
   .menu{
+    display: block;
     position: absolute;
-    width: 200px;
-    height: 100px;
-    border: 1px solid black;
-  }
-  .steak{
-    top: 30%;
+    top: 0%;
     left: 4%;
-    background: red;
+    width: 30%;
+    height: 90%;
+    border: 3px solid #fff;
+    color: #fff;
+    background: url('../../assets/images/Menu2.png') no-repeat;
+    background-size: contain;
+    background-position: center center;
   }
-  .SandP{
-    top: 50%;
-    left: 4%;
-    background: orangered;
+  .menu_view{
+    // transform: translate(25%, 90%);
   }
-  .pastas{
-    top: 70%;
-    left: 4%;
-    background: yellow;
+  .lists{
+    padding-top: 5%;
+    padding-left: 20%;
+   white-space: pre-line; 
   }
-  .salads{
-    top: 30%;
-    right: 4%;
-    background: green;
+  .list{
+    display: none;
+    padding-left: 5%;
   }
-  .desserts{
-    top: 50%;
-    right: 4%;
-    background: blue;
+  .list.on{
+    display: block;
   }
-  .drink{
-    top: 70%;
-    right: 4%;
-    background: purple;
-  }
-  .detail{
-    position: absolute;
-    border: 1px solid black;
-    width: 50%;
-    height: 100%;
+  span{
+    display: block;
+    padding: 5px;
   }
   
+
+  .detail{
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    width: 70%;
+    height: 80%;
+    
+    transform: translateX(100%);
+    transition: all 1s;
+  }
+.view{
+  z-index: 10;
+  transform: translateX(0%);
+}
+.detail.ho1{
+    background: url('../../assets/images/MenuDetail.png') no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.detail.ho2{
+    background: url('../../assets/images/MenuDetail2.png') no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
 </style>
 

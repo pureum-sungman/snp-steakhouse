@@ -62,7 +62,6 @@ export default {
     this.$nextTick(() => {
 
       function sss(){
-        console.log("sss11");
         const slides = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5'];
 
         slides.forEach(slide => {

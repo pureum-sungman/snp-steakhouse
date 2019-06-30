@@ -32,6 +32,11 @@ export default new Vuex.Store({
     }
   },
   getters: {
+    getPlatform: (/* state, getters, rootState, rootGetters */) => (
+      width = 768 // 부트스트랩 4 'md' 사이즈 기준 (px)
+    ) => {
+      return window.innerWidth <= width ? 'Mobile' : 'Dekstop';
+    },
     getRecipeById: (state /* getters, rootState, rootGetters */) => id => {
       return _find(state.recipes, { RECIPE_ID: id });
     },

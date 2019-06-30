@@ -1,5 +1,5 @@
 <template>
-  <div page="error-404">
+  <div platform="desktop" page="error-404">
     <h1>
       Page not found
     </h1>
@@ -12,6 +12,6 @@
 
 <script>
 export default {
-  name: 'PageError404'
+  name: 'PageDesktopError404'
 };
 </script>

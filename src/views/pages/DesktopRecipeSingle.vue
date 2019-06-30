@@ -1,12 +1,10 @@
 <template>
-  <div page="about">
-    <h1>new content</h1>
-  </div>
+  <div platform="desktop" page="recipe-single"></div>
 </template>
 
 <script>
 export default {
-  name: 'PageAbout'
+  name: 'PageDesktopRecipeSingle'
 };
 </script>
 

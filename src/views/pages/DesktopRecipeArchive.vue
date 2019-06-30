@@ -1,5 +1,5 @@
 <template>
-  <div page="recipes">
+  <div platform="desktop" page="recipe-archive">
     <div class="row recipe">
       <div class="col-2 left">
         <div class="lists">
@@ -33,7 +33,6 @@
           <div class="chapter"><span>5.</span> iwiwiwiwi</div>
         </div>
       </div>
-
     </div>
   </div>
 </template>
@@ -45,58 +44,61 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 // menu: https://fonts.google.com/specimen/Cabin+Sketch
 //       https://fonts.google.com/specimen/Gloria+Hallelujah
 
 // detail: https://fonts.google.com/specimen/Shadows+Into+Light
 // font: https://fonts.google.com/specimen/Courgette
 
-*{margin: 0; padding: 0;}
+* {
+  margin: 0;
+  padding: 0;
+}
 
 .recipe {
   overflow: hidden;
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: url('http://fastandfresco.it/wp-content/uploads/2018/02/fondo_granito.jpg') no-repeat;
+  background: url('http://fastandfresco.it/wp-content/uploads/2018/02/fondo_granito.jpg')
+    no-repeat;
   background-size: cover;
 }
-.left{
+.left {
   margin-left: 20px;
   position: absolute;
-  left:0;
-  top:50%;
+  left: 0;
+  top: 50%;
   transform: translateY(-50%);
 }
-.lists{
+.lists {
   font-family: 'Aclonica', sans-serif;
   font-size: 25px;
   color: #fff;
 }
-.list{
+.list {
   padding: 5px 0;
 }
 
-.right{
+.right {
   margin-right: 20px;
   position: absolute;
-  right:0;
-  top:50%;
+  right: 0;
+  top: 50%;
   transform: translateY(-50%);
 }
-.chapters{
+.chapters {
   font-family: 'Courgette', cursive;
   font-size: 30px;
   color: #fff;
 }
-span{
+span {
   font-size: 40px;
 }
-.chapter{
+.chapter {
 }
 
-.center{
+.center {
   position: relative;
   top: 50%;
   left: 50%;
@@ -104,33 +106,33 @@ span{
   height: 100%;
   transform: translate(-50%, -50%);
 }
-.def{
+.def {
   position: relative;
   top: 50%;
   left: 50%;
   width: 100%;
   height: 85%;
   transform: translate(-50%, -50%);
-  background-image: url("http://fastandfresco.it/wp-content/uploads/2018/02/pentola_vuota.png");
+  background-image: url('http://fastandfresco.it/wp-content/uploads/2018/02/pentola_vuota.png');
   background-size: 500px 500px;
   background-position: center center;
   background-repeat: no-repeat;
   z-index: 20;
 }
 
-.ss{
+.ss {
   position: absolute;
   top: 25%;
   left: 20%;
   width: 80%;
   height: 80%;
-  background-image: url("http://fastandfresco.it/wp-content/uploads/2018/02/ombra.png");
+  background-image: url('http://fastandfresco.it/wp-content/uploads/2018/02/ombra.png');
   background-size: 500px 500px;
   background-position: center center;
   background-repeat: no-repeat;
   z-index: -1;
 }
-.iii{
+.iii {
   overflow: hidden;
   position: relative;
   top: 50%;
@@ -140,17 +142,17 @@ span{
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
-.jjj{
+.jjj {
   position: absolute;
   visibility: hidden;
   width: 100%;
   height: 100%;
-  background-image: url("http://fastandfresco.it/wp-content/uploads/2018/02/erbette.jpg");
+  background-image: url('http://fastandfresco.it/wp-content/uploads/2018/02/erbette.jpg');
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
 }
-.text{
+.text {
   position: absolute;
   width: 40%;
   height: 70%;
@@ -159,10 +161,8 @@ span{
   top: 15%;
 }
 
-.iii:hover .jjj{
+.iii:hover .jjj {
   visibility: visible;
   transition: all 1s;
 }
-
-
 </style>

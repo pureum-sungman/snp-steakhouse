@@ -1,13 +1,12 @@
 <template>
-  <div layout="sidebar">
+  <div platform="desktop" layout="sidebar">
     <div class="container" role="document">
       <div class="row">
         <div class="col-9">
           <main role="main">
-            <router-view-wrapper router-name="default" />
+            <router-view />
           </main>
         </div>
-        <!-- .col-9 -->
         <div class="col-3">
           <aside>
             <component
@@ -17,22 +16,16 @@
             />
           </aside>
         </div>
-        <!-- .col-3 -->
       </div>
-      <!-- .row -->
     </div>
-    <!-- .container -->
-    <mobile-navbar-bottom v-if="$store.state.isMobile" />
   </div>
-  <!-- [layout="sidebar"] -->
 </template>
 
 <script>
-import { isNil as _isNil } from 'lodash';
-import RouterViewWrapper from '@/views/components/RouterViewWrapper.vue';
+import _isNil from 'lodash/isNil';
 
 export default {
-  name: 'LayoutSidebar',
+  name: 'LayoutDesktopSidebar',
   data() {
     return {
       sidebarComponents: []
@@ -45,13 +38,6 @@ export default {
     Promise.all(this.$route.meta.sidebarComponents).then(modules => {
       modules.forEach(module => this.sidebarComponents.push(module.default));
     });
-  },
-  components: {
-    RouterViewWrapper,
-    MobileNavbarBottom: () => {
-      // 반응형 컴포넌트는 레이지 로딩을 위해 함수 형식으로 가져올 것
-      return import('@/views/components/MobileNavbarBottom.vue');
-    }
   }
 };
 </script>

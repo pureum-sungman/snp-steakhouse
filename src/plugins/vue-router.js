@@ -14,21 +14,13 @@ export default new Router({
       path: '/',
       name: 'PageHome',
       component: () => import('@/views/pages/Home.vue'),
-      meta: {
-        layout: 'Fluid'
-      }
+      meta: { layout: 'Fluid' }
     },
     {
       path: '/about',
       name: 'PageAbout',
       component: () => import('@/views/pages/About.vue'),
-      meta: {
-        layout: 'Sidebar',
-        sidebarComponents: [
-          import('@/views/components/SidebarA.vue'),
-          import('@/views/components/SidebarB.vue')
-        ]
-      }
+      meta: { layout: 'Fluid' }
     },
     {
       path: '/gallery',
@@ -71,7 +63,7 @@ export default new Router({
       path: '/shop',
       name: 'PageShop',
       component: () => import('@/views/pages/Shop.vue'),
-      meta: { layout: 'Default' }
+      meta: { layout: 'Fluid' }
     },
     {
       path: '*',

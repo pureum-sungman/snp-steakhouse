@@ -2,7 +2,7 @@
  * vue-unicons 아이콘 플러그인
  * @link https://antonreshetov.github.io/vue-unicons/
  * 1. 상단 링크에서 필요한 아이콘 선택적으로 import 할 것
- * 2. 사용 예시
+ * 2. 사용 예
  *    <unicon
  *        name="car-wash" (이름)
  *        width="120"     (가로 px)

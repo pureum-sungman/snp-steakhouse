@@ -1,10 +1,10 @@
 <template>
-  <div platform="desktop" page="recipe-single"></div>
+  <div page="shop-archive"></div>
 </template>
 
 <script>
 export default {
-  name: 'PageDesktopRecipeSingle'
+  name: 'PageShopArchive'
 };
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <div platform="desktop" layout="default">
+  <div layout="default">
     <div class="container" role="document">
       <div class="row">
         <div class="col">
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'LayoutDesktopDefault'
+  name: 'LayoutDefault'
 };
 </script>
 

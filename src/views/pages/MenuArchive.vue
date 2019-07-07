@@ -1,5 +1,5 @@
 <template>
-  <div platform="desktop" page="menu-archive">
+  <div page="menu-archive">
     <div class="bg">
       <div class="menu">
         <div class="menu_view">
@@ -61,7 +61,7 @@
 
 <script>
 export default {
-  name: 'PageDesktopMenuArchive',
+  name: 'PageMenuArchive',
   mounted() {
     this.$nextTick(() => {
       const menuLists = ['.ho1', '.ho2', '.ho3', '.ho4', '.ho5'];
@@ -118,9 +118,6 @@ export default {
   background: url('../../assets/images/Menu2.png') no-repeat;
   background-size: contain;
   background-position: center center;
-}
-.menu_view {
-  // transform: translate(25%, 90%);
 }
 .lists {
   padding-top: 5%;

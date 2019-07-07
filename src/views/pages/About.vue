@@ -1,10 +1,12 @@
 <template>
-  <div platform="desktop" page="shop-single"></div>
+  <div page="about">
+    <h1>new content</h1>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'PageDesktopShopSingle'
+  name: 'PageAbout'
 };
 </script>
 

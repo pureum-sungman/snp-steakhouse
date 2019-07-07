@@ -1,5 +1,5 @@
 <template>
-  <div platform="desktop" page="recipe-archive">
+  <div page="recipe-archive">
     <div class="row recipe">
       <div class="col-2 left">
         <div class="lists">
@@ -39,7 +39,7 @@
 
 <script>
 export default {
-  name: 'PageRecipes'
+  name: 'PageRecipeArchive'
 };
 </script>
 
@@ -94,8 +94,6 @@ export default {
 }
 span {
   font-size: 40px;
-}
-.chapter {
 }
 
 .center {

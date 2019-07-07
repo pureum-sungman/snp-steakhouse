@@ -1,5 +1,5 @@
 <template>
-  <div platform="desktop" layout="sidebar">
+  <div layout="sidebar">
     <div class="container" role="document">
       <div class="row">
         <div class="col-9">
@@ -25,7 +25,7 @@
 import _isNil from 'lodash/isNil';
 
 export default {
-  name: 'LayoutDesktopSidebar',
+  name: 'LayoutSidebar',
   data() {
     return {
       sidebarComponents: []

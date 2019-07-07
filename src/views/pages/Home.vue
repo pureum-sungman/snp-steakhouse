@@ -1,5 +1,5 @@
 <template>
-  <div platform="desktop" page="home">
+  <div page="home">
     <section id="recipes">
       <div class="row">
         <div class="col text-center">
@@ -52,7 +52,7 @@
 
 <script>
 export default {
-  name: 'PageDesktopHome',
+  name: 'PageHome',
   data() {
     return {
       slides: [
@@ -269,4 +269,3 @@ export default {
   transform: translateX(-50%);
 }
 </style>
-

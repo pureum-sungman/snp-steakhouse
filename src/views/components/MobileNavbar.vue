@@ -1,15 +1,9 @@
 <template>
   <nav
-    component="mobile-navbar-bottom"
+    component="mobile-navbar"
     class="navbar fixed-bottom navbar-dark bg-primary"
   >
-    <ul
-      class="
-        navbar-nav
-        d-flex flex-row justify-content-around align-items-center
-        w-100
-        "
-    >
+    <ul class="navbar-nav">
       <router-link
         v-for="router in routers"
         :key="router.key"
@@ -20,7 +14,6 @@
       >
         <a class="nav-link">
           <unicon :name="router.icon" fill="#fff" />
-          <!-- {{ router.label }} -->
         </a>
       </router-link>
     </ul>
@@ -28,7 +21,7 @@
 </template>
 <script>
 export default {
-  name: 'ComponentMobileNavbarBottom',
+  name: 'ComponentMobileNavbar',
   data() {
     return {
       routers: [
@@ -61,4 +54,12 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-self: center;
+}
+</style>

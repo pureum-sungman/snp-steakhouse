@@ -1,5 +1,5 @@
 <template>
-  <div platform="desktop" layout="fluid">
+  <div layout="fluid">
     <div class="container-fluid" role="document">
       <div class="row">
         <div class="col">
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'LayoutDesktopFluid'
+  name: 'LayoutFluid'
 };
 </script>
 

@@ -1,10 +1,10 @@
 <template>
-  <div platform="mobile" page="shop-archive"></div>
+  <div page="shop-single"></div>
 </template>
 
 <script>
 export default {
-  name: 'PageMobileShopArchive'
+  name: 'PageShopSingle'
 };
 </script>
 

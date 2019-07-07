@@ -1,10 +1,10 @@
 <template>
-  <div platform="mobile" page="recipe-archive"></div>
+  <div page="menu-single"></div>
 </template>
 
 <script>
 export default {
-  name: 'PageMobileRecipeArchive'
+  name: 'PageMenuSingle'
 };
 </script>
 

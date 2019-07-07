@@ -7,10 +7,12 @@ export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
+    { path: '/home', redirect: { name: 'RouteHome' } },
+    { path: '/index', redirect: { name: 'RouteHome' } },
+    { path: '/main', redirect: { name: 'RouteHome' } },
     {
       path: '/',
-      alias: ['/home', '/index', '/main'],
-      name: 'PageHome',
+      name: 'RouteHome',
       component: () => {
         // BS4 'md' 사이즈 기준으로 윈도우 크기에 따라서 각각 다른 페이지 호출
         return window.innerWidth <= 768
@@ -21,19 +23,19 @@ export default new Router({
     },
     {
       path: '/about',
-      name: 'PageAbout',
+      name: 'RouteAbout',
       component: () => import('@/views/pages/About.vue'),
       meta: { layout: 'Fluid' }
     },
     {
       path: '/menu',
-      name: 'PageMenuArchive',
+      name: 'RouteMenuArchive',
       component: () => import('@/views/pages/MenuArchive.vue'),
       meta: { layout: 'Fluid' }
     },
     {
       path: '/menu/:id',
-      name: 'PageMenuSingle',
+      name: 'RouteMenuSingle',
       component: () => import('@/views/pages/MenuSingle.vue'),
       meta: { layout: 'Fluid' },
       beforeEnter(to, from, next) {
@@ -43,13 +45,13 @@ export default new Router({
     },
     {
       path: '/recipe',
-      name: 'PageRecipeArchive',
+      name: 'RouteRecipeArchive',
       component: () => import('@/views/pages/RecipeArchive.vue'),
       meta: { layout: 'Fluid' }
     },
     {
       path: '/recipe/:id',
-      name: 'PageRecipeSingle',
+      name: 'RouteRecipeSingle',
       component: () => import('@/views/pages/RecipeSingle.vue'),
       meta: { layout: 'Fluid' },
       beforeEnter(to, from, next) {
@@ -59,13 +61,13 @@ export default new Router({
     },
     {
       path: '/shop',
-      name: 'PageShopArchive',
+      name: 'RouteShopArchive',
       component: () => import('@/views/pages/ShopArchive.vue'),
       meta: { layout: 'Fluid' }
     },
     {
       path: '/shop/:id',
-      name: 'PageShopSingle',
+      name: 'RouteShopSingle',
       component: () => import('@/views/pages/ShopSingle.vue'),
       meta: { layout: 'Fluid' },
       beforeEnter(to, from, next) {
@@ -75,7 +77,7 @@ export default new Router({
     },
     {
       path: '*',
-      name: 'PageError404',
+      name: 'RouteError404',
       component: () => import('@/views/pages/Error404.vue'),
       meta: { layout: 'Default' }
     }

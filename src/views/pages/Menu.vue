@@ -129,29 +129,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 *{padding: 0; margin:0;}
+
   .background{
     overflow: hidden;
     position: relative;
     width: 100vw;
     height: 100vh;
-    background: url('../../assets/images/MenuBg2.jpg') no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background: url('../../assets/images/bg.jpg');
+    // background-size: cover;
+    // background-position: center center;
   }
   .menuView{
     position: absolute;
     top: 0%;
     width: 35%;
     height: 100%;
-    color: #fff;
-    background: url('../../assets/images/Menu3.png') no-repeat;
+    color: #000;
+    background: url('../../assets/images/Menu1.png') no-repeat;
     background-size: cover;
     background-position: center center;
   }
+  .menuList{
+    position: relative;
+    top: 15%;
+    left: 30%;
+  }
   .lists{
-    padding-top: 5%;
-    padding-left: 20%;
+    margin-top: 5%;
+    margin-left: 20%;
    white-space: pre-line; 
   }
   .list{
@@ -165,7 +172,6 @@ export default {
     display: block;
     padding: 5px;
   }
-  
   .details{
     position: absolute;
     right: 0;
@@ -192,7 +198,7 @@ export default {
     background-position: center center;
 }
 .detail.pastas{
-    background: url('../../assets/images/pasta.png') no-repeat;
+    background: url('../../assets/images/pasta_1.png') no-repeat;
     background-size: contain;
     background-position: center center;
 }
@@ -220,8 +226,15 @@ export default {
   overflow: hidden;
   border-radius: 50%;
 }
-.detail_view.pasta1{background: url('../../assets/images/pasta1.png') no-repeat; background-size: contain; background-position: center center;}
-.detail_view.pasta2{background: url('../../assets/images/pasta2.jpg') no-repeat; background-size: contain; background-position: center center;}
+
+.detail_view.steak1{background: url('../../assets/images/steak1_3.png') no-repeat; background-size: contain; background-position: center center;}
+.detail_view.steak2{background: url('../../assets/images/steak2_3.png') no-repeat; background-size: contain; background-position: center center;}
+.detail_view.steak3{background: url('../../assets/images/steak3_3.png') no-repeat; background-size: contain; background-position: center center;}
+.detail_view.steak4{background: url('../../assets/images/steak4_4.png') no-repeat; background-size: contain; background-position: center center;}
+.detail_view.pasta1{background: url('../../assets/images/pasta1_3.png') no-repeat; background-size: contain; background-position: center center;}
+.detail_view.pasta2{background: url('../../assets/images/pasta2_3.png') no-repeat; background-size: contain; background-position: center center;}
+.detail_view.pasta3{background: url('../../assets/images/pasta3_4.png') no-repeat; background-size: contain; background-position: center center;}
+.detail_view.pasta4{background: url('../../assets/images/pasta4_4.png') no-repeat; background-size: contain; background-position: center center;}
 .detail_view.salad1{background: url('../../assets/images/salad1.jpg') no-repeat; background-size: contain; background-position: center center;}
 .detail_view.salad2{background: url('../../assets/images/salad2.jpg') no-repeat; background-size: contain; background-position: center center;}
 .detail_view.salad3{background: url('../../assets/images/salad3.jpg') no-repeat; background-size: contain; background-position: center center;}

@@ -25,33 +25,12 @@
       </div>
       <div class="shop col-9">
         <div class="search on">
-          <input type="text" class="qqq on"/>
+          <div class="qqq on"></div>
         </div>
         <div class="mainView on">
-          <div class="view steak">
-            <div class="view_Image"></div>
-            <div class="view_Content">
-              <div class="view_Name">steak</div>
-              <div class="view_Subjec">aaaaaaa</div>
-              <div class="view_Price">$13</div>
-            </div>
-          </div>
-          <div class="view">
-            <div class="view_Image"></div>
-            <div class="view_Content">
-              <div class="view_Name">pasta</div>
-              <div class="view_Subjec">aaaaaaa</div>
-              <div class="view_Price">$13</div>
-            </div>
-          </div>
-          <div class="view">
-            <div class="view_Image"></div>
-            <div class="view_Content">
-              <div class="view_Name">salad</div>
-              <div class="view_Subjec">aaaaaaa</div>
-              <div class="view_Price">$13</div>
-            </div>
-          </div>
+          <div class="view steak"></div>
+          <div class="view"></div>
+          <div class="view"></div>
           <div class="view"></div>
           <div class="view"></div>
           <div class="view"></div>
@@ -113,6 +92,7 @@ export default {
 }
  .list_Name{
    position: absolute;
+   padding-top: 3px;
    left: 50%;
    bottom: 0%;
    transform: translateX(-50%);
@@ -154,6 +134,15 @@ export default {
   height: 90%;
   background: green;
 }
+.mainView.on{display: block;}
+.view{
+  margin: 20px;
+  display: inline-block;
+  width: 25%;
+  height: 40%;
+  border: 1px solid black;
+  background: blue;
+}
 .list_Image.steak{
   background: url('../../assets/images/shop_steak2_3.png') no-repeat;
   background-size: contain;
@@ -177,23 +166,6 @@ export default {
 .drinks{
   background: blue;
 }
-.mainView.on{display: block;}
-.view{
-  position: relative;
-  margin: 20px;
-  display: inline-block;
-  width: 25%;
-  height: 40%;
-  border: 1px solid black;
-  background: blue;
-}
-.view_Image{position: absolute; top: 3%; left: 50%; width: 80%; height: 60%; border: 1px solid black; transform: translateX(-50%);}
-.view_Content{position: absolute; bottom: 3%; left: 50%; width: 80%; height: 30%; border: 1px solid black; transform: translateX(-50%);}
-// .view_Name{}
-// .view_Subject{}
-// .view_Price{}
-
-
 
 </style>
 

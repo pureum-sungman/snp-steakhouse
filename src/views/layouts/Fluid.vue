@@ -1,6 +1,5 @@
 <template>
   <div layout="fluid">
-
     <div
       class="container-fluid px-0"
       role="document"

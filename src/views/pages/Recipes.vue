@@ -224,13 +224,6 @@ span{
   background-position: center center;
   background-repeat: no-repeat;
 }
-.center_Image.pasta{
-  transform: scale(1);
-  background-image: url('../../assets/images/recipes_pasta.png');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
 .center_Text{
   position: absolute;
   width: 40%;

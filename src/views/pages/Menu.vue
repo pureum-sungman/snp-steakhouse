@@ -72,8 +72,8 @@
         </div>
       </div>
     </div>
-    
   </div>
+  <!-- [page="menu"] -->
 </template>
 
 <script>
@@ -241,5 +241,3 @@ export default {
 .detail_view.salad4{background: url('../../assets/images/salad4.jpg') no-repeat; background-size: contain; background-position: center center;}
 
 </style>
-
-

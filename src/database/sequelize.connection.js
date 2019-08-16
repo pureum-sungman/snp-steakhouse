@@ -1,3 +1,4 @@
+
 const Sequelize = require('sequelize');
 
 /**
@@ -9,12 +10,12 @@ const Sequelize = require('sequelize');
  */
 
 module.exports = new Sequelize(
-    'HvuSOSo76T', // database
-    'HvuSOSo76T', // username
-    'cUHJu4gklC', // password
+    process.env.DB_SEQUELIZE_DATABASE,
+    process.env.DB_SEQUELIZE_USERNAME,
+    process.env.DB_SEQUELIZE_PASSWORD,
     {
-        host: 'remotemysql.com',
-        port: 3306,
+        host: process.env.DB_SEQUELIZE_HOST,
+        port: process.env.DB_SEQUELIZE_PORT,
         dialect: 'mysql', // mysql || mariadb || postgres || mssql
         pool: {
             max: 5,

@@ -4,7 +4,6 @@ const Sequelize = require('sequelize');
 /**
  *
  * https://remotemysql.com
- *
  * email: sungman.you@gmail.com
  *
  */

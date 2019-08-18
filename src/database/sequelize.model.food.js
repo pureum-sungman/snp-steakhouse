@@ -1,33 +1,44 @@
 const Sequelize = require('sequelize');
 const sequelize = require('./sequelize.connection');
 
-class Food extends Sequelize.Model {}
+class Food extends Sequelize.Model { }
 
 Food.init(
     {
-        // attributes
+        category: {
+            type: Sequelize.ENUM(
+                'steak',
+                'pasta',
+                'salad',
+                'soup',
+                'dessert',
+            ),
+            validate: {
+                notNull: true,
+                notEmpty: true
+            }
+        },
         title: {
             type: Sequelize.STRING,
-            allowNull: false
-        }
+            validate: {
+                notNull: true,
+                notEmpty: true
+            }
+        },
+        subtitle: {},
+        description: {},
+        price: {},
     },
     {
-        // options
         sequelize,
         modelName: 'food',
-        timestamps: true
+        timestamps: true,
+        paranoid: true,
+        version: true
     }
 );
 
 sequelize
     .sync({
         force: true // Drop the table if it already exists
-    })
-    .then(() =>
-        Food.create({
-            title: 'test food 1'
-        })
-    )
-    .then(jane => {
-        console.log(jane.toJSON());
     });

@@ -1,9 +1,9 @@
 const Sequelize = require('sequelize');
 const sequelize = require('./sequelize.connection');
 
-class Food extends Sequelize.Model { }
+class Ingredient extends Sequelize.Model { }
 
-Food.init(
+Ingredient.init(
     {
         title: {
             type: Sequelize.STRING,
@@ -38,7 +38,7 @@ Food.init(
     },
     {
         sequelize,
-        modelName: 'food',
+        modelName: 'ingredient',
         timestamps: true,
         paranoid: true,
         version: true
@@ -48,12 +48,4 @@ Food.init(
 sequelize
     .sync({
         force: true // Drop the table if it already exists
-    })
-    .then(() =>
-        Food.create({
-            title: 'test food 1'
-        })
-    )
-    .then(jane => {
-        console.log(jane.toJSON());
     });

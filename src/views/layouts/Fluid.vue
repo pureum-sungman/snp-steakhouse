@@ -6,6 +6,7 @@
           <main role="main">
             <router-view />
           </main>
+          <navbar-bottom v-show="window.innerWidth < 768" />
         </div>
       </div>
     </div>
@@ -14,7 +15,22 @@
 
 <script>
 export default {
-  name: 'LayoutFluid'
+  name: 'LayoutFluid',
+  data() {
+    return {};
+  },
+  watch: {
+    window
+  },
+  components: {
+    NavbarBottom: () => ({
+      component: import('@/views/components/NavbarBottom.vue'),
+      loading: null,
+      error: null,
+      delay: 200, // Milliseconds. Default value: 200
+      timeout: 10000 // Milliseconds. Default value: Inifinity
+    })
+  }
 };
 </script>
 

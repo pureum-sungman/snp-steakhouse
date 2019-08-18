@@ -1,7 +1,8 @@
 <template>
   <nav
-    component="mobile-navbar"
-    class="navbar fixed-bottom navbar-dark bg-primary"
+    component="navbar-bottom"
+    class="navbar navbar-dark fixed-bottom bg-primary"
+    v-responsive="{}"
   >
     <ul class="navbar-nav">
       <router-link
@@ -21,7 +22,7 @@
 </template>
 <script>
 export default {
-  name: 'ComponentMobileNavbar',
+  name: 'ComponentNavbarBottom',
   data() {
     return {
       routers: [
@@ -29,25 +30,25 @@ export default {
           key: 'about',
           icon: 'info-circle',
           label: 'About',
-          to: { name: 'PageAbout', params: {}, query: {} }
+          to: { name: 'RouteAbout', params: {}, query: {} }
         },
         {
           key: 'menu',
           icon: 'restaurant',
           label: 'Menu',
-          to: { name: 'PageMenu', params: {}, query: {} }
+          to: { name: 'RouteMenuArchive', params: {}, query: {} }
         },
         {
           key: 'recipes',
           icon: 'clipboard-notes',
           label: 'Recipes',
-          to: { name: 'PageRecipes', params: {}, query: {} }
+          to: { name: 'RouteRecipeArchive', params: {}, query: {} }
         },
         {
           key: 'shop',
           icon: 'shop',
           label: 'Shop',
-          to: { name: 'PageShop', params: {}, query: {} }
+          to: { name: 'RouteShopArchive', params: {}, query: {} }
         }
       ]
     };

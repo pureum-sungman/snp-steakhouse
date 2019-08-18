@@ -6,14 +6,13 @@ import router from '@/plugins/vue-router';
 import store from '@/plugins/vuex';
 import '@/plugins/axios';
 import '@/plugins/vue-unicons';
+import '@/plugins/vue-responsive-components';
 
 // 스타일
-import './assets/styles/main.scss';
+import './assets/styles/index.scss';
 
-// 노드 모듈
-import 'jquery';
-import 'popper.js';
-import 'bootstrap';
+// 스크립트
+import './assets/scripts/index.js';
 
 // 뷰 설정
 Vue.config.productionTip = false;

@@ -1,40 +1,26 @@
 const Sequelize = require('sequelize');
 const sequelize = require('./sequelize.connection');
 
-class Ingredient extends Sequelize.Model { }
+class Ingredient extends Sequelize.Model {}
 
 Ingredient.init(
     {
+        // 제목
         title: {
-            type: Sequelize.STRING,
-            validate: {
-                notNull: true,
-                notEmpty: true
-            }
+            type: Sequelize.STRING
         },
-        description: {},
-        price: {},
-
-        ingredients: {
-            type: Sequelize.STRING,
-            allowNull: false,
-            get() {
-                return this.getDataValue('favColors').split(';')
-            },
-            set(val) {
-                this.setDataValue('favColors', val.join(';'));
-            },
+        // 제목 (부)
+        subtitle: {
+            type: Sequelize.STRING
         },
-        recipes: {
-            type: Sequelize.STRING,
-            allowNull: false,
-            get() {
-                return this.getDataValue('favColors').split(';')
-            },
-            set(val) {
-                this.setDataValue('favColors', val.join(';'));
-            },
+        // 설명 (요약)
+        excerpt: {
+            type: Sequelize.STRING
         },
+        // 설명
+        description: {
+            type: Sequelize.STRING
+        }
     },
     {
         sequelize,
@@ -44,8 +30,3 @@ Ingredient.init(
         version: true
     }
 );
-
-sequelize
-    .sync({
-        force: true // Drop the table if it already exists
-    });

@@ -1,21 +1,10 @@
-const _ = require('lodash');
 const Sequelize = require('sequelize');
 const sequelize = require('./sequelize.connection');
-const FoodCategory = require('./sequelize.model.foodCategory');
 
-class Food extends Sequelize.Model {}
+class FoodCategory extends Sequelize.Model {}
 
-Food.init(
+FoodCategory.init(
     {
-        // 분류 (FK)
-        category: {
-            type: Sequelize.INTEGER,
-            references: {
-                model: FoodCategory,
-                key: 'id'
-            },
-            defaultValue: -1 // 기본값 -1 (미분류)
-        },
         // 제목
         title: {
             type: Sequelize.STRING
@@ -31,15 +20,15 @@ Food.init(
         // 설명
         description: {
             type: Sequelize.STRING
-        },
+        }
     },
     {
         sequelize,
-        modelName: 'food',
+        modelName: 'foodCategory',
         timestamps: true,
         paranoid: true,
         version: true
     }
 );
 
-export default Food;
+export default FoodCategory;

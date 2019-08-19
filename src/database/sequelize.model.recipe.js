@@ -1,29 +1,32 @@
 const Sequelize = require('sequelize');
 const sequelize = require('./sequelize.connection');
 
-class Food extends Sequelize.Model { }
+class Recipe extends Sequelize.Model { }
 
-Food.init(
+Recipe.init(
     {
+
         title: {
             type: Sequelize.STRING,
-            validate: {
-                notNull: true,
-                notEmpty: true
-            }
         },
         description: {},
-        price: {},
 
+        order: {},
+
+        // 재료
         ingredients: {
             type: Sequelize.STRING,
-            allowNull: false,
+            validate: {
+                isArray(value) {
+                    if (_.isArray(value)) throw new Error('Must be an array');
+                }
+            },
             get() {
-                return this.getDataValue('favColors').split(';')
+                return this.getDataValue('ingredients').split(';');
             },
-            set(val) {
-                this.setDataValue('favColors', val.join(';'));
-            },
+            set(value) {
+                this.setDataValue('ingredients', value.join(';'));
+            }
         },
         recipes: {
             type: Sequelize.STRING,
@@ -38,22 +41,11 @@ Food.init(
     },
     {
         sequelize,
-        modelName: 'food',
+        modelName: 'recipe',
         timestamps: true,
         paranoid: true,
         version: true
     }
 );
 
-sequelize
-    .sync({
-        force: true // Drop the table if it already exists
-    })
-    .then(() =>
-        Food.create({
-            title: 'test food 1'
-        })
-    )
-    .then(jane => {
-        console.log(jane.toJSON());
-    });
+export default Recipe;

@@ -2,10 +2,17 @@
 const sequelize = require('./sequelize.connection');
 
 /**
- * 데이터베이스 내 모든 테이블 드랍.
+ * Sequelize 모델 인스턴스
+ */
+const Category = require('./sequelize.model.category');
+const Product = require('./sequelize.model.product');
+const Tag = require('./sequelize.model.tag');
+
+/**
+ * 데이터베이스 리셋.
  * (주: 모든 데이터 삭제)
  */
-exports.dropTables = () => {
+function resetDatabase() {
     return sequelize
         .transaction() // 'Unmanaged Transaction' - commit과 rollback을 직접 호출.
         .then(t => {
@@ -77,4 +84,69 @@ exports.dropTables = () => {
                     }
                 );
         });
-};
+}
+
+/**
+ * Sequelize 모델 초기화
+ */
+async function initializeModels() {
+    await Category.initialize();
+}
+
+/**
+ * Sequelize Associations 설정
+ */
+function defineAssociations() {
+    return Promise.resolve()
+        .then(() => {
+            /**
+             * MANY (Categories)
+             * TO
+             * MANY (Categories)
+             */
+            Category.belongsToMany(Category, {
+                as: { singular: 'children', plural: 'childrens' },
+                through: 'categoryRelationships',
+                foreignKey: 'parent_id',
+                otherKey: 'children_id'
+            });
+        });
+        // .then(() => {
+        //     /**
+        //      * MANY (Products)
+        //      * TO
+        //      * MANY (Tags)
+        //      */
+        //     Product.belongsToMany(Tag, {
+        //         as: { singular: 'product', plural: 'products' },
+        //         through: 'productTags',
+        //         foreignKey: 'product_id',
+        //         otherKey: 'tag_id'
+        //     });
+        //     Tag.belongsToMany(Product, {
+        //         as: { singular: 'tag', plural: 'tags' },
+        //         through: 'productTags',
+        //         foreignKey: 'tag_id',
+        //         otherKey: 'product_id'
+        //     });
+        //     console.log('2');
+        // });
+}
+
+/**
+ * 샘플 데이터 생성
+ */
+function generateSampleData() {}
+
+/**
+ * 데이터베이스 초기화
+ */
+async function initDatabase() {
+    console.log('[DB] RESET DATABASE...');
+    await resetDatabase(); // 모든 테이블 드랍. (주: 모든 데이터 삭제)
+    console.log('[DB] DEFINE ASSOCIATIONS...');
+    await defineAssociations(); // 데이터베이스 테이블 간 관계 설정 (Associations)
+    console.log('[DB] DONE');
+}
+
+exports.initDatabase = initDatabase;

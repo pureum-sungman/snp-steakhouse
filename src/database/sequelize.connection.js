@@ -4,8 +4,10 @@ const Sequelize = require('sequelize');
 /**
  *
  * https://remotemysql.com
- * email: sungman.you@gmail.com
- *
+ * 
+ * login email: sungman.you@gmail.com
+ * 
+ * '.env' 파일 참조
  */
 
 module.exports = new Sequelize(

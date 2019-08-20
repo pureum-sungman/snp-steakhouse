@@ -20,7 +20,7 @@ Ingredient.init(
         // 설명
         description: {
             type: Sequelize.STRING
-        }
+        },
     },
     {
         sequelize,

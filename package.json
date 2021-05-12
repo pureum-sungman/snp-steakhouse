@@ -18,7 +18,7 @@
     "lodash": "^4.17.13",
     "popper.js": "^1.15.0",
     "rfs": "^8.0.4",
-    "swiper": "^4.5.0",
+    "swiper": "^6.5.1",
     "vue": "^2.6.10",
     "vue-extend-layout": "^2.0.6",
     "vue-router": "^3.0.3",
